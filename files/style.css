@@ -1,0 +1,153 @@
+html {
+  scrollbar-width: none;
+  background: #101010;
+  font-size: 10px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  width: 100%;
+  max-width: 480px;
+  padding: 1.6rem;
+}
+
+#list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+.list > i {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  color: #606060;
+  background: #202020;
+  border-radius: 1.6rem;
+  font-size: 4rem;
+}
+
+.list > .bx {
+  font-size: 5rem;
+}
+
+.list > p {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  margin-top: 1rem;
+  font: 400 1.6rem Arial, sans-serif;
+}
+
+.list > p > span {
+  color: #aaa;
+  margin-left: 0.6rem;
+  padding: 0.2rem 0.4rem;
+  background: #202020;
+  border-radius: 0.6rem;
+  font: 400 1.4rem Arial, sans-serif;
+}
+
+.this {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+.this > a {
+  min-width: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fade-in .6s forwards;
+}
+
+.cover {
+  object-fit: cover;
+  width: 100%;
+  background: #202020;
+  border-radius: 0.6rem;
+  outline: 1px solid #FFFFFF20;
+  outline-offset: -1px;
+}
+
+.anime > .cover {
+  aspect-ratio: 46 / 65;
+}
+
+.movie > .cover, .game > .cover, .tv > .cover {
+  aspect-ratio: 2 / 3;
+}
+
+.music > .cover, .channel > .cover {
+  aspect-ratio: 1 / 1;
+}
+
+.title {
+  display: -webkit-box;
+  color: #fff;
+  padding: 0.4rem 0 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  font: 1.2rem Arial, sans-serif;
+}
+
+.release {
+  color: #aaa;
+  margin: 0.4rem 0 0;
+  font: 1.2rem Arial, sans-serif;
+}
+
+.list:active, .this > a:active, button:active {
+  scale: 0.96;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  transition: 0.2s;
+  user-select: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 380px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 340px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media (min-width: 480px) {
+  html {
+    font-size: 11px;
+  }
+}
